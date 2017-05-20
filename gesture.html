@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>手势解锁</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		body, html {
+			text-align: center;
+			background-color: #f0f0f2;
+			font-size: 12px;
+		}
+
+		h1 {
+			height: 5rem;
+			line-height: 5rem;
+			font-size: 3rem;
+			font-weight: normal;
+		}
+
+		#title {
+			font-size: 1.4rem;
+		}
+
+		#input {
+			vertical-align: middle;
+			font-size: 1.2rem;
+			margin: 4rem 0 0 -14rem;
+		}
+
+		#input input {
+			margin-bottom: 2rem;
+
+		}
+	</style>
+</head>
+<body>
+	<h1>手势密码</h1>
+	<canvas width="350" height="350" id="paint"></canvas>
+	<div id="title">请输入手势密码</div>
+	<div id="input">
+		<label for="set-pw"><input type="radio" name="pw" checked="checked" id="set-pw">&nbsp;设置密码<label></label><br />
+		<label for="check-pw"><input type="radio" name="pw" id="check-pw">&nbsp;验证密码</label>
+	</div>
+	<script type="text/javascript" src="gesture.js"></script>
+	<script type="text/javascript">
+		console.log(document.getElementById('paint').getContext('2d').canvas.width);
+		gesture.init();
+		//console.log(gesture.ctx.canvas.width);
+	</script>
+</body>
+</html>
